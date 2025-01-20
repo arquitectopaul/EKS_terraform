@@ -1,0 +1,17 @@
+# Configure kubeconfig for kubectl
+aws eks --region us-east-1 update-kubeconfig --name hr-stag-eksdemo
+
+# INSTALE KUBECTL CLI
+https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
+
+# List Worker Nodes
+kubectl get nodes
+kubectl get nodes -o wide
+
+# Verify Services
+kubectl get svc
+
+CREACION DE POD
+----------------
+kubectl run  my-nginx --image=nginx  --port=80
+kubectl delete pod my-nginx
